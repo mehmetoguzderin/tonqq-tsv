@@ -1,7 +1,7 @@
 def _normal(_input: str) -> str:
-  _value = ''
+  _value = ""
   for _character in _input:
-    _encode = [int(_code) for _code in _character.encode('utf-8')]
+    _encode = [int(_code) for _code in _character.encode("utf-8")]
     _colon = len(_encode) == 1
     _colon = _colon and _encode[0] == 58
     _tyrk = len(_encode) == 4
@@ -11,6 +11,6 @@ def _normal(_input: str) -> str:
     if _colon or _tyrk:
       _value = _value + _character
     if _colon:
-      _value = _value + '\u200f'
+      _value = _value + "\u200f"
   return _value
   
